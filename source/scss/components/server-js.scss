@@ -1,0 +1,50 @@
+.server-js {
+  position: relative;
+  margin-bottom: 47px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 59px;
+    left: 15px;
+    background-image: url("../../img/blockquote.svg");
+    width: 34px;
+    height: 34px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 32px;
+    font-family: "Consolas", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  &__blockquote {
+    margin: 0;
+  }
+}
+
+@include mobile {
+  .server-js {
+    margin-bottom: 57px;
+
+    &::before {
+      top: 49px;
+      left: 20px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 23px;
+    }
+
+    &__blockquote {
+      margin: 0;
+    }
+  }
+}

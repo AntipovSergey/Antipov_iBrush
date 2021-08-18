@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Путь JavaScript</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/OpenSans-Italic.woff2" as="font">
+  <link rel="preload" href="fonts/Consolas.woff2" as="font">
+  <link rel="preload" href="fonts/Consolas-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/SegoeUI.woff2" as="font">
+  <link rel="preload" href="fonts/Merriweather-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/HelveticaNeueCyr-Roman.woff2" as="font">
+</head>
+<body>
+  <main class="main">
+    <h1 class="main__title container">Путь JavaScript</h1>
+    <section class="promo container">
+      <h2 class="visually-hidden">Основная литература по JavaScript</h2>
+      <figure class="promo__figure">
+        <div class="promo__slider">
+          <div class="promo__slide">
+            <picture>
+              <source srcset="img/promo.webp 1x, img/promo@2x.webp 2x" type="image/webp">
+              <img class="promo__img" src="img/promo.jpg" width="738" height="300" srcset="img/promo@2x.jpg" alt="Основная литература по JavaScript">
+            </picture>
+          </div>
+        </div>
+        <div class="promo__help">
+          <span class="promo__data">12</span> Апреля
+        </div>
+        <figcaption class="promo__subtitle">Можно выделить три основных направления для прогресса JavaScript <span class="promo__span">Middleюю</span></figcaption>
+      </figure>
+    </section>
+    <section class="server-js container">
+      <h2 class="server-js__title">Серверный JavaScript</h2>
+      <blockquote class="server-js__blockquote blockquote">
+        <p class="blockquote__content">Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический интерфейс и думают, что он и есть система. Они определяют систему в терминах графического интерфейса и считают, что должны сразу начать работу с графическим интерфейсом. Они не понимают важнейшего принципа: ввод/вывод не важен.</p>
+        <cite class="blockquote__author">— Р. Мартин</cite>
+      </blockquote>
+    </section>
+    <section class="ads">
+      <div class="ads__wrapper container">
+        <h2 class="visually-hidden">Рекламный блок</h2>
+        <figure class="ads__figure">
+          <figcaption class="ads__figcaption">Реклама на <a class="ads__link" href="#">blabla.com</a></figcaption>
+          <picture>
+            <source media="(max-width: 768px)" srcset="img/ads-mobile.webp 1x, img/ads-mobile@2x.webp 2x" type="image/webp">
+            <source srcset="img/ads.webp 1x, img/ads@2x.webp 2x" type="image/webp">
+            <source media="(max-width: 767px)" srcset="img/ads-mobile.jpg 1x, ads-mobile@2x.jpg 2x">
+            <img class="ads__img" src="img/ads.jpg" width="610" height="200" srcset="img/ads@2x.jpg" alt="Рекламный баннер с книгами">
+          </picture>
+        </figure>
+      </div>
+    </section>
+    <section class="conclusion container">
+      <h2 class="conclusion__title">Заключение</h2>
+      <p class="conclusion__content">Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический субъект. Абстрактное высказывание пространственно просветляет деструктивный символ. Ямб, несмотря на то, что все эти характерологические черты отсылают не к единому образу нарратора, интегрирует мифопоэтический хронотоп. Действительно, ударение приводит палимпсест. Контрапункт приводит ритм.</p>
+    </section>
+    <section class="review">
+      <div class="review__wrapper container">
+        <h2 class="visually-hidden">Форма с оценкой статьи</h2>
+        <form class="review__form form" action="#" method="GET">
+          <div class="form__stars stars">
+            <h3 class="stars__title">Оцените статью</h3>
+            <div class="stars__wrapper">
+              <label class="stars__label">
+                <input class="stars__input" type="checkbox" checked>
+              </label>
+              <label class="stars__label">
+                <input class="stars__input" type="checkbox" checked>
+              </label>
+              <label class="stars__label">
+                <input class="stars__input" type="checkbox" checked>
+              </label>
+              <label class="stars__label">
+                <input class="stars__input" type="checkbox" checked>
+              </label>
+              <label class="stars__label">
+                <input class="stars__input" type="checkbox">
+              </label>
+            </div>
+          </div>
+          <div class="form__comments comments">
+            <h3 class="comments__title">Добавить комментарий к книге</h3>
+            <!-- <label>
+              <input type="text" placeholder="Александр">
+            </label>
+            <label>
+              <input type="email" placeholder="E-mail">
+            </label>
+            <select name="" id="">
+              <option value="" disabled selected>Выберите книгу</option>
+              <option value=""></option>
+            </select>
+            <textarea name="" id="" cols="30" rows="10"></textarea> -->
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

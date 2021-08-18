@@ -1,0 +1,64 @@
+.ads {
+  margin-bottom: 25px;
+  background-color: $color-gallery;
+
+  &__wrapper {
+    padding: 0 40px;
+    padding-bottom: 40px;
+  }
+
+  &__figcaption {
+    margin: 0;
+    margin-bottom: 17px;
+    padding-top: 34px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__link {
+    color: $color-blue-ribbon;
+    text-decoration: underline;
+  }
+
+  &__img {
+    display: block;
+    width: 610px;
+    height: 200px;
+  }
+}
+
+@include mobile {
+  .ads {
+    margin-bottom: 24px;
+
+    &__wrapper {
+      max-width: 280px;
+      padding: 0;
+      padding-bottom: 19px;
+    }
+
+    &__figure {
+      margin: 0 auto;
+    }
+
+    &__figcaption {
+      margin: 0;
+      margin-bottom: 12px;
+      padding-top: 24px;
+      font-family: "Segoe UI", "Arial", sans-serif;
+    }
+
+    &__link {
+      color: $color-blue-ribbon;
+      text-decoration: underline;
+    }
+
+    &__img {
+      width: 280px;
+      height: auto;
+    }
+  }
+}

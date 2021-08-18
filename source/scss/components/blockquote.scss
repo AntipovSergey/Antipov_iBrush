@@ -1,0 +1,37 @@
+.blockquote {
+  padding-left: 57px;
+
+  &__content {
+    margin: 0;
+    margin-bottom: 31px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-cod-gray;
+  }
+
+  &__author {
+    font-size: 16px;
+    font-weight: normal;
+    color: $color-boulder;
+  }
+}
+
+@include mobile {
+  .blockquote {
+    padding-left: 53px;
+
+    &__content {
+      margin-bottom: 23px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__author {
+      font-size: 14px;
+    }
+  }
+
+}

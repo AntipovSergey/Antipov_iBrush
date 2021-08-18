@@ -1,0 +1,29 @@
+.stars {
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-top: 40px;
+    font-family: "Consolas", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: $color-shark;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 10;
+  }
+
+  &__input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25px;
+    height: 23px;
+    background-image: url("../../img/star.svg");
+  }
+
+  &__input:checked {
+    background-image: url("../../img/star-checked.svg");
+  }
+}

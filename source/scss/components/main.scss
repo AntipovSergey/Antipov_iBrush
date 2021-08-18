@@ -1,0 +1,67 @@
+.main {
+  &__title {
+    position: relative;
+    margin-top: 75px;
+    margin-bottom: 69px;
+    text-align: center;
+    font-family: "Consolas", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    color: $color-blue-ribbon;
+  }
+
+  &__title::before {
+    position: absolute;
+    content: "";
+    top: 22px;
+    left: -2px;
+    width: 143px;
+    height: 1px;
+    background-color: $color-alto;
+  }
+
+  &__title::after {
+    position: absolute;
+    content: "";
+    top: 22px;
+    right: 0;
+    width: 143px;
+    height: 1px;
+    background-color: $color-alto;
+  }
+}
+
+@include mobile {
+  .main {
+    overflow-x: scroll;
+
+    &__title {
+      margin-top: 38px;
+      margin-bottom: 41px;
+      font-size: 23px;
+      line-height: 25px;
+    }
+
+    &__title::before {
+      position: absolute;
+      content: "";
+      top: 14px;
+      left: -2px;
+      width: 30px;
+      height: 1px;
+      background-color: $color-alto;
+    }
+
+    &__title::after {
+      position: absolute;
+      content: "";
+      top: 14px;
+      right: 0;
+      width: 30px;
+      height: 1px;
+      background-color: $color-alto;
+    }
+  }
+}

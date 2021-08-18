@@ -1,0 +1,18 @@
+﻿//ГЛОБАЛЬНЫЕ ЭЛЕМЕНТЫ
+@import "./vendor/normalize";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// КОМПОНЕНТЫ
+@import "./components/ads";
+@import "./components/blockquote";
+@import "./components/comments";
+@import "./components/conclusion";
+@import "./components/form";
+@import "./components/main";
+@import "./components/promo";
+@import "./components/review";
+@import "./components/server-js";
+@import "./components/stars";
