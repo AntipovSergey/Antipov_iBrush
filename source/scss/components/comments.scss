@@ -1,3 +1,225 @@
-// .comments {
+.comments {
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 226px);
+  column-gap: 30px;
+  row-gap: 20px;
 
-// }
+  &__title {
+    grid-column: 1 / -1;
+    margin: 0;
+    margin-bottom: -4px;
+    font-family: "Consolas", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: $color-shark;
+  }
+
+  &__name-block {
+    position: relative;
+  }
+
+  &__span {
+    position: absolute;
+    top: 9px;
+    left: 19px;
+    font-family: "Arial", sans-serif;
+    line-height: 14px;
+    color: #777777;
+  }
+
+  &__name {
+    grid-column: 1 / 2;
+    padding: 25px 19px 9px 19px;
+    width: 100%;
+    border: 1px solid $color-mercury;
+    border-radius: 6px;
+  }
+
+  &__name::placeholder {
+    color: $color-mine-shaft;
+  }
+
+  &__email {
+    grid-column: 2 / 3;
+    padding: 17px 20px;
+    width: 100%;
+    border: 1px solid $color-mercury;
+    border-radius: 6px;
+  }
+
+  &__book {
+    grid-column: 3 / 4;
+    padding: 18px 20px;
+    width: 100%;
+    border: 1px solid $color-mercury;
+    border-radius: 6px;
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    padding: 12px 18px;
+    border: 1px solid $color-mercury;
+    border-radius: 6px;
+    max-height: 120px;
+    overflow-y: scroll;
+  }
+
+  &__button {
+    display: block;
+    border: none;
+    margin-top: -2px;
+    padding: 14px 69px;
+    background-color: $color-blue-ribbon;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $color-white;
+  }
+}
+
+.choices {
+  margin-bottom: 0;
+}
+
+.choices__inner {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  background-color: $color-white;
+  padding: 13px 15px;
+  border: 2px solid $color-gray;
+  border-radius: 6px;
+  font-size: 14px;
+  min-height: 44px;
+  overflow: hidden;
+}
+
+.choices.is-open.is-focused .choices__inner {
+  padding-top: 13px;
+  padding-bottom: 9px;
+  border-radius: 6px;
+}
+
+.choices.is-open.is-focused .choices__list--dropdown {
+  margin-top: 7px;
+  box-shadow: 0 2px 15px $color-silver;
+}
+
+.choices__list--single {
+  display: inline-block;
+  padding: 2px 16px 6px 4px;
+  width: 100%;
+}
+
+.choices.is-open.is-focused .choices__list--single {
+  display: inline-block;
+  padding: 2px 11px 6px 4px;
+  width: 100%;
+}
+
+.choices__list--dropdown .choices__item--selectable::after {
+  display: none;
+}
+
+.choices__list--dropdown .choices__item {
+  position: relative;
+  padding: 14px 25px;
+  font-size: 14px;
+}
+
+.choices__list--dropdown .choices__item:hover {
+  background-color: $color-gallery;
+  border-left: 7px solid $color-blue-ribbon;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  padding-right: 0;
+}
+
+.choices__item--choice:first-of-type {
+  display: none;
+}
+
+.choices .choices__inner::after {
+  content: "";
+  height: 6px;
+  width: 10px;
+  background-image: url("../../img/arrow.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 20.5px;
+  top: 50%;
+  margin-top: -2.5px;
+  pointer-events: none;
+  transform: scale(1, -1);
+}
+
+.choices[data-type*="select-one"]::after {
+  display: none;
+}
+
+.choices.is-open.is-focused .choices__inner::after {
+  content: "";
+  height: 6px;
+  width: 10px;
+  background-image: url("../../img/arrow.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 20.5px;
+  top: 50%;
+  margin-top: -2.5px;
+  pointer-events: none;
+  transform: scale(1, 1);
+}
+
+@include mobile {
+  .comments {
+    padding-bottom: 40px;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 9px;
+
+    &__title {
+      grid-column: 1 / -1;
+      margin: 0;
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    &__name {
+      grid-column: 1 / -1;
+    }
+
+    &__email {
+      grid-column: 1 / -1;
+    }
+
+    &__book {
+      grid-column: 1 / -1;
+    }
+
+    &__text {
+      grid-column: 1 / -1;
+    }
+
+    &__button {
+      margin-top: 1px;
+    }
+  }
+
+  .choices__inner {
+    border: 2px solid $color-gray;
+  }
+
+  .choices[data-type*="select-one"] .choices__inner {
+    padding-bottom: 5.5px;
+  }
+
+  .choices__list--single {
+    display: inline-block;
+    padding: 0 16px 9px 4px;
+    width: 100%;
+  }
+}

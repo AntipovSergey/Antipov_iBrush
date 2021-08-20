@@ -1,3 +1,13 @@
 .form {
+  &__stars {
+    margin-bottom: 28px;
+  }
+}
 
+@include mobile {
+  .form {
+    &__stars {
+      margin-bottom: 17px;
+    }
+  }
 }

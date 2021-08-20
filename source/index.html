@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Путь JavaScript</title>
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/OpenSans-Italic.woff2" as="font">
   <link rel="preload" href="fonts/Consolas.woff2" as="font">
@@ -12,6 +17,16 @@
   <link rel="preload" href="fonts/SegoeUI.woff2" as="font">
   <link rel="preload" href="fonts/Merriweather-Regular.woff2" as="font">
   <link rel="preload" href="fonts/HelveticaNeueCyr-Roman.woff2" as="font">
+  <noscript>
+    <style>
+      /**
+      * Reinstate scrolling for non-JS clients
+      */
+      .simplebar-content-wrapper {
+        overflow: auto;
+      }
+    </style>
+  </noscript>
 </head>
 <body>
   <main class="main">
@@ -19,13 +34,11 @@
     <section class="promo container">
       <h2 class="visually-hidden">Основная литература по JavaScript</h2>
       <figure class="promo__figure">
-        <div class="promo__slider">
-          <div class="promo__slide">
-            <picture>
-              <source srcset="img/promo.webp 1x, img/promo@2x.webp 2x" type="image/webp">
-              <img class="promo__img" src="img/promo.jpg" width="738" height="300" srcset="img/promo@2x.jpg" alt="Основная литература по JavaScript">
-            </picture>
-          </div>
+        <div class="promo__slider" data-simplebar>
+          <picture>
+            <source srcset="img/promo.webp 1x, img/promo@2x.webp 2x" type="image/webp">
+            <img class="promo__img" src="img/promo.jpg" width="738" height="300" srcset="img/promo@2x.jpg" alt="Основная литература по JavaScript">
+          </picture>
         </div>
         <div class="promo__help">
           <span class="promo__data">12</span> Апреля
@@ -84,22 +97,31 @@
           </div>
           <div class="form__comments comments">
             <h3 class="comments__title">Добавить комментарий к книге</h3>
-            <!-- <label>
-              <input type="text" placeholder="Александр">
-            </label>
+            <div class="comments__name-block">
+              <label>
+                <span class="comments__span">Имя</span>
+                <input class="comments__name" type="text" placeholder="Александр">
+              </label>
+            </div>
             <label>
-              <input type="email" placeholder="E-mail">
+              <input class="comments__email" type="email" placeholder="E-mail">
             </label>
-            <select name="" id="">
-              <option value="" disabled selected>Выберите книгу</option>
-              <option value=""></option>
+            <select class="comments__book" name="books">
+              <option value="">Выберите книгу</option>
+              <option value="JavaScript ниндзя">JavaScript ниндзя</option>
+              <option value="Pragmatic Guide to JavaScript">Pragmatic Guide to JavaScript</option>
+              <option value="Pro JavaScript Techniques">Pro JavaScript Techniques</option>
+              <option value="Выразительный JavaScript">Выразительный JavaScript</option>
             </select>
-            <textarea name="" id="" cols="30" rows="10"></textarea> -->
+            <textarea class="comments__text" name="textarea" id="textarea" cols="30" rows="10" placeholder="Ваш отзыв"></textarea>
+            <input class="comments__button" type="submit">
           </div>
         </form>
       </div>
     </section>
   </main>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
   <script src="js/script.min.js"></script>
 </body>
 </html>
