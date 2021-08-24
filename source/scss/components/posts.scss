@@ -1,0 +1,49 @@
+.posts {
+  &__title {
+    margin: 0;
+    margin-bottom: 41px;
+    font-family: "Consolas", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+    color: $color-dune;
+  }
+
+  &__img {
+    display: block;
+    margin-bottom: 19px;
+    width: 226px;
+    height: 226px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    padding-bottom: 75px;
+    font-family: "Consolas", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-dune;
+  }
+}
+
+@include mobile {
+  .posts {
+    &__title {
+      margin-bottom: 26px;
+      font-weight: 700;
+      font-size: 23px;
+    }
+
+    &__img {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 19px;
+      width: 280px;
+      height: 280px;
+    }
+
+    &__subtitle {
+      width: 80%;
+    }
+  }
+}

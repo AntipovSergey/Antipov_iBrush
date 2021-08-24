@@ -1,3 +1,10 @@
 .review {
+  margin-bottom: 59px;
   background-color: $color-gallery;
+}
+
+@include mobile {
+  .review {
+    margin-bottom: 36px;
+  }
 }

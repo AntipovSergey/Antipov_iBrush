@@ -6,10 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Путь JavaScript</title>
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/OpenSans-Italic.woff2" as="font">
   <link rel="preload" href="fonts/Consolas.woff2" as="font">
@@ -119,9 +117,47 @@
         </form>
       </div>
     </section>
+    <section class="posts">
+      <div class="posts__wrapper container">
+        <h2 class="posts__title">Похожие посты</h2>
+        <div class="posts__swiper swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/react-mob.webp 1x, img/react-mob@2x.webp 2x" type="image/webp">
+                <source srcset="img/react.webp 1x, img/react@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 767px)" srcset="img/react-mob.png 1x, react-mob@2x.png 2x">
+                <img class="posts__img" src="img/react.png" srcset="img/react@2x.png" width="226" height="226" alt="React">
+              </picture>
+              <h3 class="posts__subtitle">События жизненного цикла ReactJS</h3>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/grid-mob.webp 1x, img/grid-mob@2x.webp 2x" type="image/webp">
+                <source srcset="img/grids.webp 1x, img/grids@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 767px)" srcset="img/grid-mob.png 1x, grid-mob@2x.png 2x">
+                <img class="posts__img" src="img/grids.png" srcset="img/grids@2x.png" width="226" height="226" alt="Grids">
+              </picture>
+              <h3 class="posts__subtitle">CSS Grids. Полное руководство</h3>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/js-mob.webp 1x, img/js-mob@2x.webp 2x" type="image/webp">
+                <source srcset="img/js.webp 1x, img/js@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 767px)" srcset="img/js-mob.png 1x, js-mob@2x.png 2x">
+                <img class="posts__img" src="img/js.png" srcset="img/js@2x.png" width="226" height="226" alt="JS">
+              </picture>
+              <h3 class="posts__subtitle">Асинхронность в JavaScript</h3>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/script.min.js"></script>
 </body>
 </html>
