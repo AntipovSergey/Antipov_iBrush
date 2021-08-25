@@ -21,7 +21,6 @@ const mySwiper = new Swiper(swiper, {
     type: 'bullets',
     clickable: true,
   },
-  loop: true,
   breakpoints: {
     768: {
       slidesPerView: 3,

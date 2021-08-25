@@ -1,6 +1,16 @@
 .promo {
+  position: relative;
   margin-bottom: 53px;
-  border-bottom: solid 0.5px $color-alto-shade;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 0.5px;
+    background-color: $color-alto-shade;
+  }
 
   &__figure {
     position: relative;
@@ -62,6 +72,10 @@
   .promo {
     margin-bottom: 29px;
     border-bottom: none;
+
+    &::before {
+      display: none;
+    }
 
     &__figure {
       margin: 0;
